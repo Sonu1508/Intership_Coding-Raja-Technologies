@@ -1,0 +1,19 @@
+#cv-form{
+ 
+}
+
+.myimg{
+   
+    border-radius: 50%;
+    width: 200px;
+}
+.background{
+    background-color: rgb(44, 199, 199);
+}
+.btn {
+    background-color: green;
+}
+
+#cv-template{
+    display: none;
+}

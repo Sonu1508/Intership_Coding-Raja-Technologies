@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Online Resume Builder</title>
+</head>
+<body>
+    
+    <div class="container" id="cv-form">
+      <h1 class="text-center my-3">Resume Generator</h1>
+      <p class="text-center">Fill the Details to Generate your resume</p>
+
+      <div class="row">
+        <div class="col-md-6">
+        <h3>Personal Details</h3>
+
+        <div class="form-group">
+            <label for="nameField">Name</label>
+            <input type="text" 
+             id="nameField"
+             placeholder="Enter your name"
+            class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <label for="phoneField">Phone Number</label>
+            <input type="text" 
+             id="phoneField"
+             placeholder="Enter your number"
+            class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="addressField">Your Address</label>
+            <textarea 
+             id="addressField"
+             placeholder="Enter your Address"
+             class="form-control">
+            </textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="">select image</label>
+            <input id="imgField" type="file" class="form-control">
+        </div>
+
+        <p class="mt-3">Important Links</p>
+
+        <div class="form-group">
+            <label for="emailField">Email Id</label>
+            <input type="text" 
+             id="emailField"
+             placeholder="Enter your Email Id"
+            class="form-control">
+        </div>
+
+
+        <div class="form-group">
+            <label for="TwitterField">Twitter Id</label>
+            <input type="text" 
+             id="TwitterField"
+             placeholder="Enter your Twitter Id"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="LinkedinField">Linkedin</label>
+            <input type="text" 
+             id="LinkedinField"
+             placeholder="Enter your Linkedin"
+            class="form-control">
+        </div>
+
+        <div class="form-group mt-2">
+            <label for="GithubField">GitHub</label>
+            <input type="text" 
+             id="GithubField"
+             placeholder="Enter your GitHub Id"
+            class="form-control">
+        </div>
+
+      </div>
+        <div class="col-md-6">
+            <h3>Professional Details</h3>
+
+            <div class="form-group mt-2">
+                <label for="">Objective</label>
+                <textarea 
+                 id="objectiveField"
+                 placeholder="Enter Here"
+                 class="form-control">
+                </textarea>
+            </div>
+            
+
+            <div class="form-group mt-2">
+                <label for="">project</label>
+                <textarea 
+                 id="projectsField"
+                 placeholder="Enter Here"
+                 class="form-control">
+                </textarea>
+            </div>
+            
+
+            <div class="form-group mt-2" id="we">
+                <label for="">Work Experience</label>
+                <textarea 
+                
+                 placeholder="Add Here"
+                 class="form-control weField">
+                </textarea>
+                <div class="container text-center mt-2 " id="weAddButton" >
+                    <button onclick="addNewExperience()" class="btn btn-primary btn-sm">Add</button>
+                 </div>
+            </div>
+
+            <div class="form-group mt-2" id="skill">
+                <label for="">skills</label>
+                <textarea 
+                 placeholder="Add Here"
+                 class="form-control skillField">
+                </textarea>
+                <div class="container text-center mt-2" id="skillAddButton">
+                    <button onclick="addNewSkills()" class="btn btn-primary btn-sm">Add</button>
+                 </div>
+            </div>
+
+           
+
+            <div class="form-group mt-2" id="aq">
+                <label for="">Academic Qualification</label>
+                <textarea 
+                 placeholder="Add Here"
+                 class="form-control educationField">
+                </textarea>
+                <div class="container text-center mt-2" id="AqAddButton">
+                    <button onclick="addNewQualification()" class="btn btn-primary btn-sm">Add</button>
+                 </div>
+            </div>
+        </div>
+      </div>
+      <div class="container text-center mt-4">
+        <button onclick="generateCv()" class="btn btn-primary bt-lg">Generate Resume</button>
+      </div>
+  </div>
+
+
+    <div class="container" id="cv-template">
+      <div class="row">
+        <div class="col-md-4 text-center background">
+            <!--first col-->
+            <img src="https://amaxfireandsecurity.co.uk/wp-content/uploads/2023/12/profile-pic-MD.jpg" alt=""
+            class="img-fluid myimg"
+            id="imgT"
+            />
+            <div class="container">
+                <p id="nameT1">sonu kumar</p>
+                <p id="contactT">+918851583256</p>
+                <p id="addressT">Pratap nagar sitamarhi,bihar</p>
+
+                <hr/>
+                <p><a id="emailT"href="#1">sonustm02@gmail.com </a></p>
+                <p><a  id="twitterT" href="#2">https://www.Twitter.com</a></p>
+                <p><a id="linkedinT" href="#3">www.linkedin.com/in/sonu-kumar-5475a</a></p>
+                <p><a id="GithubT" href="#4">www.github.com</a></p>
+
+            </div>
+
+        </div>
+        <div class="col-md-8">
+            <!-- second col-->
+           
+            <h1 id="nameT2" class="text-center" style="font-weight: 900;" >Sonu kumar</h1>
+            <!-- Objective card-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+
+                <div class="card body">
+                    <p id="objectiveT">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, consequuntur!</p>
+                </div>
+            </div>
+
+            <!-- Project card-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>project</h3>
+                </div>
+
+                <div class="card body">
+                    <p id="projectT">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, consequuntur!</p>
+                </div>
+            </div>
+
+            <!--work Experience -->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+
+                <div class="card body">
+                   <ul id="weT">
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, reprehenderit?</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, cupiditate.</li>
+                    <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, praesentium.</li>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, libero!</li>
+                   </ul>
+                </div>
+            </div>
+
+            <!-- skills-->
+            <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>skills</h3>
+                </div>
+
+                <div class="card body">
+                   <ul id="skillT">
+                    <li>software developement</li>
+                    <li>web developement</li>
+                    <li>Mern stack</li>
+                    <li>Data Structure</li>
+                   </ul>
+                </div>
+            </div>
+
+             
+
+             <!-- Academic Qualification-->
+             <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+
+                <div class="card body">
+                   <ul id="aqT">
+                    <li>BTECH RGPV UNIVERSITY BHOPAL (2019-2023)</li>
+                    <li>INTERMEDIATE LKS SITAMARHI BIHAR (2017-2019)</li>
+                    <li>MATRICULATION SVM SITAMARHI BIHAR (2017)</li>
+                    <li>Data Structure</li>
+                   </ul>
+                </div>
+            </div>
+
+            <div class="container mt-3 text-center">
+                <button onclick="printCv()" class="btn ">Print cv</button>
+            </div>
+        </div>
+      </div>  
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
